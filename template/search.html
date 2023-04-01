@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+        <title>Yellow Pages</title>
+<br>
+<h1>Search results:</h1>
+    </head>
+    <body >
+<br>
+<br>
+                                <div class="table-container">
+                                <br>
+                                    <table class="table" id="dataTable" width="100%" cellspacing="0">
+                                       <thead>
+                                            <tr>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>City</th>
+                                                <th>Contact Number</th>
+                                            </tr>
+                                        </thead>
+                                    {% for info in Data %}
+                                            <tr>
+                                                <td data-label="Name">{{info.FirstName}}</td>
+                                                <td data-label="Name">{{info.LastName}}</td>
+                                                <td data-label="City">{{info.City}}</td>
+                                                <td data-label="ContactNumber">{{info.ContactNumber}}</td>
+                                            </tr>
+                                 
+                                    {% endfor %}
+                                    </tbody>
+                                    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+        <title>Yellow Pages</title>
+    </head>
+    <body >
+        <br>
+        <br>
+        <br>
+        
+        <form action="{% url 'formupdate' Data.id %}" class="form-inline" method="post">
+        {% csrf_token %}
+        <label for = "firstname">First Name:</label>
+        <input type="text" id="firstname" placeholder="Enter First Name" name="firstname" required value={{Data.FirstName}}>
+        <label for = "lastname">Last Name:</label>
+        <input type="text" id="lastname" placeholder="Enter Last Name" name="lastname" required value={{Data.LastName}}>
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter city" name="city" required value={{Data.City}}>
+        <label for="phone">Contact Number:</label>
+        <input type="phone" id="phone" name="phone" placeholder="Enter Contact Number" required value={{Data.ContactNumber}}>
+        <button type="submit" >Add</button>
+</form>
+<br>
+<br>
+<br>
+    </div>
+</body>
+</html>

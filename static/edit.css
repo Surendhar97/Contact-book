@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 250, 250),
+    rgb(153, 140, 255)
+  );
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.form-inline label {
+  margin: 5px 20px 5px;
+}
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 15px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  border-radius: 5px;
+}
+.form-inline button:hover {
+  background-color: royalblue;
+}
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  .form-inline {
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+}

@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(47, 48, 35);
+  text-shadow: 0px 0px 25px rgb(255, 255, 70);
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.form-inline label {
+  margin: 5px 20px 5px;
+}
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 15px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  border-radius: 5px;
+}
+.form-inline button:hover {
+  background-color: royalblue;
+}
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  .form-inline {
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 250, 250),
+    rgb(153, 140, 255)
+  );
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+.table-container {
+  padding: 0 10%;
+  margin: 40px auto 0;
+}
+.heading {
+  font-size: 40 px;
+  text-align: center;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 5px 5px 10px 0px #004a5b;
+}
+.table thead {
+  background-color: #004a5b;
+}
+.table thead tr th {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+}
+.table tbody tr td {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  background-color: #ffffff;
+  padding: 8px;
+  text-align: center;
+  border: 1px dashed #6f6f6f;
+}
